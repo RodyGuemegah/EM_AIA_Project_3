@@ -10,18 +10,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 
-# 2. Charger les données
-# ⚠️ Mets ici le bon chemin vers ton CSV décompressé
+#Chargerment des données
 df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
-# 3. Aperçu du dataset
+# Aperçu du dataset
 print("Dimensions :", df.shape)
 print("\nTypes de données :")
 print(df.info())
 print("\nExtrait du jeu de données :")
 # display(df.head())
 
-# 4. Vérification de la cible (Churn)
 print("\nRépartition de la variable cible (Churn) :")
 print(df["Churn"].value_counts())
 sns.countplot(x="Churn", data=df)
