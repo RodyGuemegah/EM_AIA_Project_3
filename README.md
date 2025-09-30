@@ -5,11 +5,13 @@ Ce projet vise à prédire le churn (départ client) dans le secteur des téléc
 ## 1. Collecte et Préparation des Données
 - On commence par le chargement du dataset brut (CSV).
 - On met en place un nettoyage des données : suppression des colonnes inutiles, conversion des colonnes numériques mal typées, gestion des valeurs manquantes.
-- Encodage des variables catégorielles (Yes/No → 0/1, autres catégories → indicatrices).
+- Encodage des variables catégorielles (Yes/No → 0/1).
 - Création de variables synthétiques (ex : nombre de services souscrits).
 - Normalisation des variables numériques.
 ### Extrait du code illustant ce qui a été fait 
 ![Exemple de code](results\extrait_code\Screen_code_data_training.png)
+
+![alt text](image.png)
 
 
 ## 2. Analyse Exploratoire (EDA)
