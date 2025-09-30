@@ -39,11 +39,12 @@ Ce projet vise à prédire le churn (départ client) dans le secteur des téléc
 ## 5. Sélection et Sauvegarde du Modèle
 - Les modèles sont comparés avec différentes métriques:
 - Accuracy, Recall, Precision, F1-score
-| Modèle                | Accuracy | Recall (Churn) | F1-score (Churn) | AUC      |
-| --------------------- | -------- | -------------- | ---------------- | -------- |
-| Régression Logistique | **0.79** | 0.51           | 0.56             | 0.83     |
-| Arbre de Décision     | 0.75     | 0.55           | 0.57             | 0.80     |
-| Random Forest         | **0.82** | **0.63**       | **0.68**         | **0.87** |
+
+    | Modèle                | Accuracy | Recall (Churn) | F1-score (Churn) | AUC      |
+    |-----------------------|----------|----------------|------------------|----------|
+    | Régression Logistique | 0.79     | 0.51           | 0.56             | 0.83     |
+    | Arbre de Décision     | 0.75     | 0.55           | 0.57             | 0.80     |
+    | Random Forest         | 0.82     | 0.63           | 0.68             | 0.87     |
 #### Ici on remarque dans ce tableau de comparaison des 3 différents modèle que le Random Forest est le plus robuste avec un meilleur Recall ainsi qu'un meilleur AUC.
 
 ##### Malgré ces scores on remarque une limite importante des modèles pour détecter les client qui churn avec untaux assez faibles (voir matrice de confusion des 3 modèles)
