@@ -9,7 +9,7 @@ Ce projet vise à prédire le churn (départ client) dans le secteur des téléc
 - Création de variables synthétiques (ex : nombre de services souscrits).
 - Normalisation des variables numériques.
 ### Extrait du code illustant ce qui a été fait 
-    ![Exemple de code](extrait_code/Screen_code_data_training.png)
+![Exemple de code](extrait_code/Screen_code_data_training.png)
 
 
 ## 2. Analyse Exploratoire (EDA)
