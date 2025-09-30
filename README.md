@@ -1,17 +1,24 @@
 # Prédiction du Churn Client - Documentation du Projet
 
-Ce projet vise à prédire le churn (départ client) dans le secteur des télécommunications à partir de données réelles. Voici les principales étapes du workflow :
+Ce projet vise à prédire le churn (départ client) dans le secteur des télécommunications à partir de données réelles. Voici les principales étapes qui m'ont permis de réaliser ce projet :
 
 ## 1. Collecte et Préparation des Données
-- Chargement du dataset brut (CSV).
-- Nettoyage des données : suppression des colonnes inutiles, conversion des colonnes numériques mal typées, gestion des valeurs manquantes.
+- On commence par le chargement du dataset brut (CSV).
+- On met en place un nettoyage des données : suppression des colonnes inutiles, conversion des colonnes numériques mal typées, gestion des valeurs manquantes.
 - Encodage des variables catégorielles (Yes/No → 0/1, autres catégories → indicatrices).
 - Création de variables synthétiques (ex : nombre de services souscrits).
 - Normalisation des variables numériques.
+### Extrait du code illustant ce qui a été fait 
+    ![Exemple de code](extrait_code/Screen_code_data_training.png)
+
 
 ## 2. Analyse Exploratoire (EDA)
-- Visualisation de la répartition du churn et des variables clés (tenure, MonthlyCharges, TotalCharges, type de contrat, etc.).
-- Analyse des profils de clients churnés.
+- Visualisation de la répartition du churn et des variables clés (tenure, MonthlyCharges, TotalCharges, type de contrat, etc.)
+- Analyse des profils de clients churnés selon plusieurs variable: selon Type de contrat, tenure .
+- Repartition churn vs non churn (graphique).
+- L'utilisation d'un Random Forest (exploratoire) à été nécéssaire afin d'identifier le Top 10 des variables les plus importantes:
+
+
 
 ## 3. Séparation des Données
 - Séparation des features (X) et de la cible (y).

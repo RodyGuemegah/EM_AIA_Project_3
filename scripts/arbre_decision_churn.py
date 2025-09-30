@@ -43,7 +43,6 @@ tree.plot_tree(model,
 plt.title("Arbre de Décision pour la Prédiction du Churn")
 plt.show()
 
-# # Interprétation des règles de décision et complexité du modèle
 # from sklearn.tree import export_text
 # rules = export_text(model, feature_names=list(X.columns))
 # print('\nRègles de décision de l\'arbre :')

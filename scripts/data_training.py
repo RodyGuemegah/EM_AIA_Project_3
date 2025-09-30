@@ -21,11 +21,9 @@ sns.countplot(x="Churn", data=df)
 plt.title("Répartition Churn vs Non-Churn")
 plt.show()
 
-# 5. Vérification des valeurs manquantes
 print("\nValeurs manquantes :")
 print(df.isna().sum())
 
-# 6. Vérification des doublons
 print("\nDoublons :", df.duplicated().sum())
 
 #  Nettoyage des colonnes
@@ -33,24 +31,23 @@ print("\nDoublons :", df.duplicated().sum())
 if "customerID" in df.columns:
     df.drop("customerID", axis=1, inplace=True)
 
-# Conversion de colonnes numériques mal typées
+# Conversion de colonnes numériques
 if df["TotalCharges"].dtype == "object":
     df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")
 
 # Remplacer les valeurs manquantes par la médiane
 df["TotalCharges"].fillna(df["TotalCharges"].median(), inplace=True)
 
-# 8. Encodage de la cible (Yes/No → 1/0)
+# Encodage de la cible (Yes/No → 1/0)
 df["Churn"] = LabelEncoder().fit_transform(df["Churn"])
 
-# 9. Encodage des variables catégorielles (One-Hot Encoding)
+# Encodage des variables catégorielles (One-Hot Encoding)
 df = pd.get_dummies(df, drop_first=True)
 
-# 10. Vérification finale
+
 print("\nDimensions après nettoyage :", df.shape)
 print(df.head())
 
-# 11. Séparation features (X) et target (y)
 X = df.drop("Churn", axis=1)
 y = df["Churn"]
 
