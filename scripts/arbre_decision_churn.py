@@ -16,9 +16,9 @@ X = pd.get_dummies(X, drop_first=True)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 model = DecisionTreeClassifier(
-    max_depth=5, #se limite à une profondeur de 5 pour éviter le surapprentissage
-    min_samples_split=20, # un noeud doit contenir au moins 20 échantillons pour être divisé
-    min_samples_leaf=10, # les feuilles  doivent contenir 10 échantillons
+    max_depth=5, #se limite à une profondeur de 5
+    min_samples_split=20, 
+    min_samples_leaf=10,
     
     random_state=42)
 model.fit(X_train, y_train)

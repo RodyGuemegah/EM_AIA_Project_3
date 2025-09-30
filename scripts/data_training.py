@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 
-#Chargerment des données
+
 df = pd.read_csv("data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 

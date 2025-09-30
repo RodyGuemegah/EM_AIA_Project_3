@@ -7,27 +7,27 @@ from sklearn.metrics import classification_report, confusion_matrix
 file_path = "data/telco_churn_prepared.csv"
 df = pd.read_csv(file_path)
 
-# Encodage de la cible Churn (Yes/No → 1/0)
+# Encodage de la cible Churn
 if df['Churn'].dtype == 'object':
 	df['Churn'] = df['Churn'].map({'No': 0, 'Yes': 1})
 
-# 2. Séparation de la cible avant encodage
+#  Séparation de la cible avant encodage
 y = df['Churn']
 X = df.drop('Churn', axis=1)
 
-# 3. Encodage des variables catégorielles sur X uniquement
+
 X = pd.get_dummies(X, drop_first=True)
 
-# 4. Séparation en train/test
+
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# 5. Création et entraînement du modèle
+
 from sklearn.linear_model import LogisticRegression
 model = LogisticRegression(max_iter=1000)
 model.fit(X_train, y_train)
 
-# 6. Prédiction et évaluation
+
 from sklearn.metrics import classification_report, confusion_matrix
 y_pred = model.predict(X_test)
 print('Matrice de confusion :')
